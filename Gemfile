@@ -45,11 +45,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Use the maths and levelgem gems developed for this application
 # maths generates questions for the application
-gem 'maths', '~> 1.0.1'
+gem 'maths', '~> 1.0.1', :git 'https://github.com/ciaranCBbyrne/rubygems.git'
 # levelgem checks the users level of competence
-gem 'levelgem', '~> 1.0.0'
+gem 'levelgem', '~> 1.0.0', :git 'https://github.com/ciaranCBbyrne/rubygems.git'
 # mathshelper will give user guidelines on how to solve simple equations
-gem 'mathshelper'
+gem 'mathshelper', :git 'https://github.com/ciaranCBbyrne/rubygems.git'
 
 # Use the devise and twitter-bootstrap-rails gems
 # devise provides log-in and registration to application
