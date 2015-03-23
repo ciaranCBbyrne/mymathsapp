@@ -1,0 +1,11 @@
+branch-defaults:
+  master:
+    environment: mymathsapp-env
+global:
+  application_name: mymathapp
+  default_ec2_keyname: knifePair
+  default_platform: 64bit Amazon Linux 2014.09 v1.2.0 running Ruby 2.1 (Passenger
+    Standalone)
+  default_region: eu-west-1
+  profile: eb-cli
+  sc: git
