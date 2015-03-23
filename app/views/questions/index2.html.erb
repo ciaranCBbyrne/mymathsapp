@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Previous Questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Difficulty</th>
+      <th>Asked Question</th>
+      <th>User Answer</th>
+      <th>Correct Answer</th>
+      <th>Correct?</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.level %></td>
+        <td><%= question.difficulty %></td>
+        <td><%= question.askedquestion %></td>
+        <td><%= question.useranswer %></td>
+        <td><%= question.rightanswer %></td>
+        <td><%= question.correct %></td>
+        <td><%= link_to 'Show', question %></td>
+        <td><%= link_to 'Edit', edit_question_path(question) %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
