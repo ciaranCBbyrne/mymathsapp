@@ -43,17 +43,12 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Use the maths and levelgem gems developed for this application
-# maths generates questions for the application
-#gem 'maths', '~> 1.0.1', :git 'https://github.com/ciaranCBbyrne/rubygems.git'
-# levelgem checks the users level of competence
-#gem 'levelgem', '~> 1.0.0', :git 'https://github.com/ciaranCBbyrne/rubygems.git'
-# mathshelper will give user guidelines on how to solve simple equations
-#gem 'mathshelper', :git 'https://github.com/ciaranCBbyrne/rubygems.git'
-
 git 'https://github.com/ciaranCBbyrne/rubygems.git' do
+	# use maths gem to generate questions for the application
 	gem 'maths', '~> 1.0.1'
+	# use levelgem to check the users level of competence
 	gem 'levelgem', '~> 1.0.0'
+	# use mathshelper to give user guidelines on how to solve equations
 	gem 'mathshelper'
 end
 
