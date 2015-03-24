@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/ciaranCBbyrne/rubygems.git
+  revision: 7dd115f89ecff5d1215cb6e144060aa2a366248a
+  specs:
+    levelgem (1.0.0)
+    maths (1.0.1)
+    mathshelper (0.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -76,13 +84,10 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.2)
-    levelgem (1.0.0)
     loofah (2.0.1)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    maths (1.0.1)
-    mathshelper (0.0.0)
     mime-types (2.4.3)
     mini_portile (0.6.2)
     minitest (5.5.1)
@@ -177,9 +182,9 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
-  levelgem (~> 1.0.0)
-  maths (~> 1.0.1)
-  mathshelper
+  levelgem (~> 1.0.0)!
+  maths (~> 1.0.1)!
+  mathshelper!
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
