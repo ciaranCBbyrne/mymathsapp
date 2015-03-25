@@ -98,7 +98,7 @@ class QuestionsController < ApplicationController
       @question_number = Question.where(:user_id => current_user, :level => @hold_level).count + 1
 
       #call congrats gem on completion of the previous level
-      if @user_level != @hold_level
+      if @user_level != @hold_level and @hold_level.to_i != 0
         @total_level_correct = Question.where(:user_id => current_user, :level => @user_level,
               :correct => 'correct').count
         @total_level_incorrect = Question.where(:user_id => current_user, :level => @user_level,
