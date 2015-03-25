@@ -43,6 +43,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# my gems developed for this application
 git 'https://github.com/ciaranCBbyrne/rubygems.git' do
 	# use maths gem to generate questions for the application
 	gem 'maths', '~> 1.0.1'
@@ -50,6 +51,12 @@ git 'https://github.com/ciaranCBbyrne/rubygems.git' do
 	gem 'levelgem', '~> 1.0.0'
 	# use mathshelper to give user guidelines on how to solve equations
 	gem 'mathshelper'
+end
+
+# include external gem from brian martin
+git 'https://github.com/brianjgmartin/rubyGems.git' do
+	# use congrats gem to give user breakdown of level when they've completed it
+	gem 'congrats'
 end
 
 # Use the devise and twitter-bootstrap-rails gems

@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/brianjgmartin/rubyGems.git
+  revision: 65a0cd821979cb69af0a253f466dec771dc1bb38
+  specs:
+    congrats (0.0.0)
+
+GIT
   remote: https://github.com/ciaranCBbyrne/rubygems.git
   revision: 7dd115f89ecff5d1215cb6e144060aa2a366248a
   specs:
@@ -179,6 +185,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
+  congrats!
   devise
   jbuilder (~> 2.0)
   jquery-rails

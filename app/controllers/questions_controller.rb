@@ -97,6 +97,16 @@ class QuestionsController < ApplicationController
       @result = Generate.makeQuestion(@hold_level, @hold_difficulty)
       @question_number = Question.where(:user_id => current_user, :level => @hold_level).count + 1
 
+      #call congrats gem on completion of the previous level
+      if @user_level != @hold_level
+        @total_level_correct = Question.where(:user_id => current_user, :level => @user_level,
+              :correct => 'correct').count
+        @total_level_incorrect = Question.where(:user_id => current_user, :level => @user_level,
+              :correct => 'incorrect').count
+        @congrats, @correct, @incorrect = Congratulations.response(@user_level.to_i, @total_level_correct.to_i,
+              @total_level_incorrect.to_i, current_user.profile.firstname)
+      end
+
       #get help from the mathshelper gem if user hasn't passed the level by question 7 of current level and difficulty
       if Question.where(:user_id => current_user, :level => @hold_level, :difficulty => @hold_difficulty).count >= 7
         #get tips for current question
@@ -107,14 +117,19 @@ class QuestionsController < ApplicationController
     # when user commits answer of question in /exam this will call the maths gem to compare answers
     def compare
       @input1 = params[:search_string].to_i
+      # check answer in maths gem
       @result1 = Generate.answerCheck(@input1)
-      @hold_question, @hold_answer, @ques_level, @ques_difficulty = Generate.getQuestion
 
+      # get full question, level, and difficulty from maths gem to put in db
+      @hold_question, @hold_answer, @ques_level, @ques_difficulty = Generate.getQuestion
+      # get the number of the previously asked question and increment by one to pass to db
       @question_num = Question.where(:user_id => current_user, :level => @ques_level).count
       @question_num += 1
 
+      # add information to questions db
       @question = Question.create(user_id: current_user, level: @ques_level, difficulty: @ques_difficulty,
             askedquestion: @hold_question, useranswer: @input1, rightanswer: @hold_answer, correct: @result1,
             question_number: @question_num)
+
     end
 end

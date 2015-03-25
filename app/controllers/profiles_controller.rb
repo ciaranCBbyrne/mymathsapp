@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
   # GET /profiles
@@ -83,7 +84,7 @@ class ProfilesController < ApplicationController
       else
         @user = User.find(current_user.id)
         @profile = Profile.find_by_user_id(@user.id)
-        redirect_to "/profiles/#{@profile.id}"
+        redirect_to "/profiles"
       end
     end
 end

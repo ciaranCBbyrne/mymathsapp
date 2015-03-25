@@ -1,6 +1,6 @@
 body {
   background-color: #fff;
-  background-image: image-url('swirl.jpg');
+  background-image: image-url('blackboard.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
   color: #333;
@@ -26,8 +26,11 @@ table{
   background-color: yellow;
 }
 
-h1, h2, h3{
-  background-color: red;
+h1, h2, h3, h4, h5{
+  background-color: white;
+  margin-right: 300px;
+  margin-left: 300px;
+  text-align: center;
 }
 
 pre {
@@ -37,6 +40,7 @@ pre {
 }
 
 a {
+  background-color: white;
   color: #000;
   &:visited {
     color: #666;
@@ -48,8 +52,10 @@ a {
 }
 
 div {
+  background-color: white;
+  margin-right: 850px;
   &.field, &.actions {
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
   }
 }
 
@@ -84,4 +90,12 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+
+dl {
+  background-color: white;  
+}
+
+div.controls {
+  margin-right: 0px;
 }

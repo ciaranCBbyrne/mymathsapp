@@ -1,20 +1,28 @@
-<h1>Level <%= @hold_level %></h1>
-<h1>Question <%= @question_number %></h1>
+<h1>Level <%= @hold_level %>
+	Question <%= @question_number %></h1>
+
 <%= form_tag "/validate" do %>
 	<h3><%= @result %> =
-	<%= text_field_tag :search_string %></h3>
-	<%= submit_tag "Check Answer" %>
+	<%= text_field_tag :search_string, '', size: 7 %></h3>
+	<h4><%= submit_tag "Check Answer" %><h4>
 <% end %>
 
 <% if @tip_line_one != nil %>
 	<p>Question Guidelines<p>
-	<%= @tip_line_one %>
+	<%= @tip_line_one %><br/>
 <% end %>
 
 <% if @tip_line_two != nil %>
-	<%= @tip_line_two %>
+	<%= @tip_line_two %><br/>
 <% end %>
 
 <% if @tip_line_three != nil %>
 	<%= @tip_line_three %>
+<% end %>
+
+<% if @congrats != nil %>
+	<h4><%= @congrats %><br/>
+		<%= @correct %><br/>
+		<%= @incorrect %>
+	</h4>
 <% end %>
