@@ -6,9 +6,9 @@ GIT
 
 GIT
   remote: https://github.com/ciaranCBbyrne/rubygems.git
-  revision: 7dd115f89ecff5d1215cb6e144060aa2a366248a
+  revision: 1e4f2e254ba3eded27360266dd46daa7782357df
   specs:
-    levelgem (1.0.0)
+    levelgem (1.0.1)
     maths (1.0.1)
     mathshelper (0.0.0)
 
@@ -189,7 +189,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
-  levelgem (~> 1.0.0)!
+  levelgem (~> 1.0.1)!
   maths (~> 1.0.1)!
   mathshelper!
   rails (= 4.2.0)

@@ -48,7 +48,7 @@ git 'https://github.com/ciaranCBbyrne/rubygems.git' do
 	# use maths gem to generate questions for the application
 	gem 'maths', '~> 1.0.1'
 	# use levelgem to check the users level of competence
-	gem 'levelgem', '~> 1.0.0'
+	gem 'levelgem', '~> 1.0.1'
 	# use mathshelper to give user guidelines on how to solve equations
 	gem 'mathshelper'
 end

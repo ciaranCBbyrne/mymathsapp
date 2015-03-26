@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :profiles
 
   devise_for :users
@@ -13,6 +14,8 @@ Rails.application.routes.draw do
   root :to => 'home#index'
 
   get '/myprofile' => 'profiles#myprofile'
+
+  get '/*all', :controller => 'application', :action => 'not_found'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -93,7 +93,7 @@ class QuestionsController < ApplicationController
       #pass in current level, current difficulty, questions asked per level/difficulty, and correct 
       #answers per level/difficulty
       @hold_level,@hold_difficulty = Levelfinder.getLevel(@user_level.to_i,@user_difficulty.to_i,
-              @level_questions.to_i,@level_correct.to_i)
+              @level_questions.to_i,@level_correct.to_i, 5)
       @result = Generate.makeQuestion(@hold_level, @hold_difficulty)
       @question_number = Question.where(:user_id => current_user, :level => @hold_level).count + 1
 
@@ -104,7 +104,7 @@ class QuestionsController < ApplicationController
         @total_level_incorrect = Question.where(:user_id => current_user, :level => @user_level,
               :correct => 'incorrect').count
         @congrats, @correct, @incorrect = Congratulations.response(@user_level.to_i, @total_level_correct.to_i,
-              @total_level_incorrect.to_i, current_user.profile.firstname)
+              @total_level_incorrect.to_i, current_user.email)
       end
 
       #get help from the mathshelper gem if user hasn't passed the level by question 7 of current level and difficulty

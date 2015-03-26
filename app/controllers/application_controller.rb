@@ -7,4 +7,7 @@ class ApplicationController < ActionController::Base
   	"/myprofile"
   end
   
+  def not_found
+  	redirect_to '/404'
+  end
 end
