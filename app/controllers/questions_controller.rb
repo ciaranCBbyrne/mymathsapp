@@ -115,6 +115,7 @@ class QuestionsController < ApplicationController
     end
 
     # when user commits answer of question in /exam this will call the maths gem to compare answers
+    # and save details in the questions db
     def compare
       @input1 = params[:search_string].to_i
       # check answer in maths gem
@@ -130,6 +131,9 @@ class QuestionsController < ApplicationController
       @question = Question.create(user_id: current_user, level: @ques_level, difficulty: @ques_difficulty,
             askedquestion: @hold_question, useranswer: @input1, rightanswer: @hold_answer, correct: @result1,
             question_number: @question_num)
+
+      #loop back to next question
+      redirect_to :exam
 
     end
 end

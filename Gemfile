@@ -51,6 +51,8 @@ git 'https://github.com/ciaranCBbyrne/rubygems.git' do
 	gem 'levelgem', '~> 1.0.1'
 	# use mathshelper to give user guidelines on how to solve equations
 	gem 'mathshelper'
+	# use creditgem to give the user a rating based on the level attained
+	gem 'creditgem'
 end
 
 # include external gem from brian martin
@@ -59,7 +61,7 @@ git 'https://github.com/brianjgmartin/rubyGems.git' do
 	gem 'congrats'
 end
 
-# Use the devise and twitter-bootstrap-rails gems
+# Use the devise and twitter-bootstrap-rails gems from rubygems.org
 # devise provides log-in and registration to application
 gem 'devise'
 # twitter-bootstrap-rails generates styling to application

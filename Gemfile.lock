@@ -6,8 +6,9 @@ GIT
 
 GIT
   remote: https://github.com/ciaranCBbyrne/rubygems.git
-  revision: 1e4f2e254ba3eded27360266dd46daa7782357df
+  revision: ab0c0ea1a58ea5f8b40134e920c214d514d936a8
   specs:
+    creditgem (0.0.0)
     levelgem (1.0.1)
     maths (1.0.1)
     mathshelper (0.0.0)
@@ -186,6 +187,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   congrats!
+  creditgem!
   devise
   jbuilder (~> 2.0)
   jquery-rails

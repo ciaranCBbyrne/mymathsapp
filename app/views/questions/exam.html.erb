@@ -4,7 +4,7 @@
 <%= form_tag "/validate" do %>
 	<h3><%= @result %> =
 	<%= text_field_tag :search_string, '', size: 7 %></h3>
-	<h4><%= submit_tag "Check Answer" %><h4>
+	<h4><%= submit_tag "Submit Answer" %><h4>
 <% end %>
 
 <% if @tip_line_one != nil %>

@@ -10,4 +10,5 @@ class ApplicationController < ActionController::Base
   def not_found
   	redirect_to '/404'
   end
+
 end
