@@ -16,7 +16,6 @@
 	<% end %>
 	<%= menu_group pull: :right do %>
 		<% if current_user %>
-			<%= menu_item Credit.setCredit(Question.where(:user_id => current_user).maximum(:level)) %>
 			<%= menu_item current_user.email, profiles_path %>
 			<%= menu_item "Log out", destroy_user_session_path, :method => :delete %>
 		<% else %>
